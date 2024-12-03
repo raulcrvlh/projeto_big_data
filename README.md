@@ -62,7 +62,7 @@ GROUP BY uf
 ORDER BY area_total DESC;
 ```
 
-![alt text](image1.png)
+![resultado query](images/image1.png)
 
 ### Filtragem de Propriedades por Região:
 ```sql
@@ -72,7 +72,7 @@ FROM public.sicar_table
 WHERE uf IN ('SP', 'RJ', 'MG', 'ES');
 ```
 
-![alt text](image2.png)
+![resultado query](images/image2.png)
 
 ### Propriedades Dentro de Polígono:
 ```sql
@@ -83,7 +83,7 @@ WHERE longitude BETWEEN -53.8181518 AND -51.0495971
   AND latitude BETWEEN -19.4632582 AND -16.1924262;
 ```
 
-![alt text](image3.png)
+![resultado query](images/image3.png)
 
 ## Arquitetura do Projeto
 1. Dados Oriniginais (CSV)
@@ -92,3 +92,6 @@ WHERE longitude BETWEEN -53.8181518 AND -51.0495971
 4. Consultas SQL e Análises
 5. Armazenamento de Resultados em Novas Tabelas
 6. Relatórios e Visualizações (via exportação ou consultas adicionais)
+
+![arquitetura1](images/arquitetura1.jpeg)
+![arquitetura2](images/arquitetura2.jpeg)
