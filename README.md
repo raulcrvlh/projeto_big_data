@@ -53,35 +53,35 @@ A aplicação foi projetada para manipular grandes volumes de dados (mais de 6 m
 
 ## Principais Consultas Realizadas
 ### Soma das Áreas por Estado:
-``sql
+```sql
 CREATE TABLE area_total_por_uf AS
 SELECT uf AS estado, 
        SUM(area_liquida + area_remanescente_vegetacao_nativa + area_reserva_legal_proposta + area_preservacao_permanente + area_nao_classificada) AS area_total
 FROM public.sicar_table
 GROUP BY uf
 ORDER BY area_total DESC;
-``
+```
 
 ![alt text](image1.png)
 
 ### Filtragem de Propriedades por Região:
-``sql
+```sql
 CREATE TABLE propriedades_sudeste AS
 SELECT * 
 FROM public.sicar_table
 WHERE uf IN ('SP', 'RJ', 'MG', 'ES');
-``
+```
 
 ![alt text](image2.png)
 
 ### Propriedades Dentro de Polígono:
-``sql
+```sql
 CREATE TABLE propriedades_dentro_do_poligono AS
 SELECT * 
 FROM public.sicar_table
 WHERE longitude BETWEEN -53.8181518 AND -51.0495971
   AND latitude BETWEEN -19.4632582 AND -16.1924262;
-``
+```
 
 ![alt text](image3.png)
 
